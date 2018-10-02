@@ -1,0 +1,29 @@
+REGULAR EMPLOYEES
+- Apply for reimbursement through html form one week prior to event
+- Login to system through other form
+- able to create normal user accounts through another form
+- message other users
+- Ability to cancel requests
+- After event completion, employ should attach grade or presentation as appropriate
+
+DIRECT SUPERVISOR
+- Must provide approval for Tuition Reimbursement. 
+- able to message other users ( use this for more info requests )
+- can apply for reimbursement as well
+- Must provide reason for denying approval
+- If supervisor is a department head, that approval step is skipped
+- After two weeks, request is auto approved and goes to Deparment Head
+
+DEPARTMENT HEAD 
+- Must provide approval for Tuition Reimbursement
+- able to message other users ( use this for more info requests from employees and supervisors )
+- If Department head does not complete this task in a timely manner, request is auto approved to a BenCo
+- Must provide reason for denying approval
+
+BenCo
+- Must provide approval for Tuition Reimbursement
+- Can change the reimbursement amount ( notify employee and give option to cancel)
+- If BenCo does not approve, escalation email is sent to direct supervisor
+- Can award amount larger than amount available to employee ( Must provide reason and mark the reimbursement as exceeding available funds for reporting purposes)
+- Confirm uploaded grade is passing when grade is submitted
+

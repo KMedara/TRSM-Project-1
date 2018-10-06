@@ -1,4 +1,6 @@
-package com.example.controller;
+package com.revature.controller;
+
+import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 public class RequestHelper {
 
 
-	public static String process(HttpServletRequest request, HttpServletResponse response) {
+	public static String process(HttpServletRequest request, HttpServletResponse response) throws SQLException {
 		System.out.println(request.getRequestURI());
 		switch(request.getRequestURI()) {
 		
@@ -24,7 +26,7 @@ public class RequestHelper {
 			return RegisterController.Register(request);
 			
 		case "/PetsExample/html/PetJSON.do":
-			return HomeController.PetJSON(request, response);
+			return HomeController.EmployeeJSON(request, response);
 		
 		default:
 			return "/html/Login.html"; 

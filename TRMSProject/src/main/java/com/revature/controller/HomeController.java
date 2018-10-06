@@ -1,13 +1,13 @@
-package com.example.controller;
+package com.revature.controller;
 
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.model.Pet;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.beans.Employee;
 
 public class HomeController {
 	
@@ -23,12 +23,11 @@ public class HomeController {
 
 }
 
-
-	public static String PetJSON(HttpServletRequest request, HttpServletResponse response) {
+	public static String EmployeeJSON(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("in PetJSON method");
-		Pet pet =(Pet)request.getSession().getAttribute("Pet");
+		Employee emp =(Employee)request.getSession().getAttribute("Employee");
 		try {
-			response.getWriter().write(new ObjectMapper().writeValueAsString(pet));
+			response.getWriter().write(new ObjectMapper().writeValueAsString(emp));
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

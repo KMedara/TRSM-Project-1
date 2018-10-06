@@ -1,29 +1,31 @@
 package com.revature.controller;
 
+import java.sql.SQLException;
+
 import javax.servlet.http.HttpServletRequest;
 
-import com.revature.dao.PetDaoImpl;
-import com.revature.beans.Pet;
+import com.revature.beans.Employee;
+import com.revature.daoimpl.EmployeeDaoImpl;
 
 
 public class LoginController {
 
-	public static String Login(HttpServletRequest request) {
+	public static String Login(HttpServletRequest request) throws SQLException {
 		if (request.getMethod().equals("GET")) {
 			return "/html/Login.html";
 		}
 
-		String name = request.getParameter("name");
+		String username = request.getParameter("username");
 		String type = request.getParameter("type");
 
-		PetDaoImpl petDaoImpl = new PetDaoImpl();
-		Pet pet = new Pet();
+		EmployeeDaoImpl edi = new EmployeeDaoImpl();
+		Employee emp = new Employee();
 
-		pet = petDaoImpl.selectPetByName(name);
+		emp = edi.getEmployeeByLogin(username);
 
-		if (name.equals(pet.getName()) && type.equals(pet.getType())) {
-			request.getSession().setAttribute("Pet", pet);
-			System.out.println(pet + "in the if statement to login");
+		if (username.equals(emp.getUsername()) && type.equals(emp.getPassword())) {
+			request.getSession().setAttribute("Employee", emp);
+			System.out.println(emp + "in the if statement to login");
 			return "/html/Home.html";
 
 		} else {

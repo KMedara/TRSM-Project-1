@@ -3,7 +3,7 @@ package com.revature.beans;
 import java.sql.Date;
 import java.sql.Time;
 
-public class ReimbursmentForm {
+public class ReimbursementForm {
 
 	private int id;
 	private int employeeId;
@@ -17,11 +17,11 @@ public class ReimbursmentForm {
 	private String state;
 	private String comments;
 	
-	public ReimbursmentForm() {
+	public ReimbursementForm() {
 		super();
 	}
 	//without comments and id, when building from program
-	public ReimbursmentForm(int employeeId, int gradeId, int coverageId, Date dateSubmit, Time timeSubmit, Float cost,
+	public ReimbursementForm(int employeeId, int gradeId, int coverageId, Date dateSubmit, Time timeSubmit, Float cost,
 			String grade, String city, String state) {
 		super();
 		this.employeeId = employeeId;
@@ -35,7 +35,7 @@ public class ReimbursmentForm {
 		this.state = state;
 	}
 	//with comments and id, building from db
-	public ReimbursmentForm(int id, int employeeId, int gradeId, int coverageId, Date dateSubmit, Time timeSubmit, Float cost,
+	public ReimbursementForm(int id, int employeeId, int gradeId, int coverageId, Date dateSubmit, Time timeSubmit, Float cost,
 			String grade, String city, String state, String comments) {
 		super();
 		this.id = id;

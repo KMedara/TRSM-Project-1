@@ -1,28 +1,41 @@
-package com.example.controller;
+package com.revature.controller;
+
+import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.example.dao.PetDaoImpl;
-import com.example.model.Pet;
+import com.revature.beans.Employee;
+import com.revature.daoimpl.EmployeeDaoImpl;
 
 
 public class RegisterController {
 
-	public static String Register(HttpServletRequest request) {
+	public static String Register(HttpServletRequest request) throws SQLException {
 		if (request.getMethod().equals("GET")) {
 			return "/html/Login.html";
 		}
 		
-		String name = request.getParameter("name");
-		String type = request.getParameter("type");
+		String firstname = request.getParameter("firstname");
+		String lastname = request.getParameter("lastname");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String email = request.getParameter("email");
+		String role = request.getParameter("role");
+		String reportsto = request.getParameter("reportsto");
+		//String type = request.getParameter("type");
 		
-		Pet pet = new Pet();
+		Employee emp = new Employee();
 		
-		pet.setName(name);
-		pet.setType(type);
+		emp.setFirstName(firstname);
+		emp.setLastName(lastname);
+		emp.setUsername(username);
+		emp.setPassword(password);
+		emp.setEmail(email);
+		emp.setRoleId(Integer.parseInt(role));
+		emp.setReportsTo(Integer.parseInt(reportsto));
 		
-		PetDaoImpl petDaoImpl = new PetDaoImpl();
-		petDaoImpl.insertPet(pet);
+		EmployeeDaoImpl edi = new EmployeeDaoImpl();
+		edi.createEmployee(emp);
 		return "/html/Login.html";
 	}
 

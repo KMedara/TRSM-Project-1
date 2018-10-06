@@ -2,7 +2,7 @@ body
 {
 	margin: 0;
 	padding: 0;
-	background: url(background.jpg);
+	background: url("../img/background.jpg");
 	background: cover;
 	background-position: center;
 	font-family: sans-serif;
@@ -13,7 +13,7 @@ body
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	witdh: 350px;
+	width: 350px;
 	height: 420px;
 	padding: 80px 30px;
 	box-sizing: border-box;
@@ -64,7 +64,7 @@ h1
 .login-box input[type = "password"]
 {
 	border: none;
-	borde-bottom: 1px solid #fff;
+	border-bottom: 1px solid #fff;
 	background: transparent;
 	outline: none;
 	height: 40px;
@@ -97,7 +97,7 @@ h1
 	font-size: 14px;
 	color: #fff;
 }
-#a-forgetPass:hover
+#a-forgotPass:hover,#a-createUser:hover
 {
 	color: #1537d8;
 }
@@ -105,9 +105,7 @@ h1
 	right: 10%;
 	position: absolute;
 }
-#a-createUser:hover {
-	color:#1537d8
-}
+ 
 
 
 

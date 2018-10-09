@@ -7,7 +7,7 @@ public class ReimbursementForm {
 
 	private int id;
 	private int employeeId;
-	private int gradeId;
+	private int gradeTypeId;
 	private int coverageId;
 	private Date dateSubmit;
 	private Time timeSubmit;
@@ -21,11 +21,11 @@ public class ReimbursementForm {
 		super();
 	}
 	//without comments and id, when building from program
-	public ReimbursementForm(int employeeId, int gradeId, int coverageId, Date dateSubmit, Time timeSubmit, Float cost,
+	public ReimbursementForm(int employeeId, int gradeTypeId, int coverageId, Date dateSubmit, Time timeSubmit, Float cost,
 			String grade, String city, String state) {
 		super();
 		this.employeeId = employeeId;
-		this.gradeId = gradeId;
+		this.gradeTypeId = gradeTypeId;
 		this.coverageId = coverageId;
 		this.dateSubmit = dateSubmit;
 		this.timeSubmit = timeSubmit;
@@ -35,12 +35,12 @@ public class ReimbursementForm {
 		this.state = state;
 	}
 	//with comments and id, building from db
-	public ReimbursementForm(int id, int employeeId, int gradeId, int coverageId, Date dateSubmit, Time timeSubmit, Float cost,
+	public ReimbursementForm(int id, int employeeId, int gradeTypeId, int coverageId, Date dateSubmit, Time timeSubmit, Float cost,
 			String grade, String city, String state, String comments) {
 		super();
 		this.id = id;
 		this.employeeId = employeeId;
-		this.gradeId = gradeId;
+		this.gradeTypeId = gradeTypeId;
 		this.coverageId = coverageId;
 		this.dateSubmit = dateSubmit;
 		this.timeSubmit = timeSubmit;
@@ -62,11 +62,11 @@ public class ReimbursementForm {
 	public void setEmployeeId(int employeeId) {
 		this.employeeId = employeeId;
 	}
-	public int getGradeId() {
-		return gradeId;
+	public int getGradeTypeId() {
+		return gradeTypeId;
 	}
-	public void setGradeId(int gradeId) {
-		this.gradeId = gradeId;
+	public void setGradeTypeId(int gradeId) {
+		this.gradeTypeId = gradeId;
 	}
 	public int getCoverageId() {
 		return coverageId;
@@ -118,7 +118,7 @@ public class ReimbursementForm {
 	}
 	@Override
 	public String toString() {
-		return "ReimbursmentForm [id=" + id + ", employeeId=" + employeeId + ", gradeId=" + gradeId + ", coverageId="
+		return "ReimbursmentForm [id=" + id + ", employeeId=" + employeeId + ", gradeTypeId=" + gradeTypeId + ", coverageId="
 				+ coverageId + ", dateSubmit=" + dateSubmit + ", timeSubmit=" + timeSubmit + ", cost=" + cost
 				+ ", grade=" + grade + ", city=" + city + ", state=" + state + ", comments=" + comments + "]";
 	}

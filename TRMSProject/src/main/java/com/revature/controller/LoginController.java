@@ -16,18 +16,17 @@ public class LoginController {
 		}
 
 		String username = request.getParameter("username");
-		String type = request.getParameter("type");
+		String type = request.getParameter("password");
 
 		EmployeeDaoImpl edi = new EmployeeDaoImpl();
 		Employee emp = new Employee();
 
 		emp = edi.getEmployeeByLogin(username);
-
+		
 		if (username.equals(emp.getUsername()) && type.equals(emp.getPassword())) {
 			request.getSession().setAttribute("Employee", emp);
 			System.out.println(emp + "in the if statement to login");
 			return "/html/Home.html";
-
 		} else {
 			return "sorry";
 		}

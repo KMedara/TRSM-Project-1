@@ -19,33 +19,29 @@ public class MasterServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-		throws ServletException, IOException {
+		throws ServletException, IOException {	
 		try {
 			String jsonStuff = RequestHelper.process(request, response);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-
-		
 	}
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException {
 
 		String targetURL = null;
-		try {
-			targetURL = RequestHelper.process(request, response);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			try {
+				targetURL = RequestHelper.process(request, response);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		request.getRequestDispatcher(targetURL).forward(request, response);
 		
-		
 	}
+	
 	
 }
 

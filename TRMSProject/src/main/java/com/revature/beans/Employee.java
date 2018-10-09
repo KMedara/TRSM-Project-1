@@ -1,7 +1,7 @@
 package com.revature.beans;
 
 public class Employee {
-
+	
 	private int id;
 	private int roleId;
 	private String firstName;
@@ -10,6 +10,7 @@ public class Employee {
 	private String password;
 	private String email;
 	private int reportsTo;
+	private double balance;
 	
 	public Employee() {
 		super();
@@ -26,12 +27,14 @@ public class Employee {
 		this.password = password;
 		this.email = email;
 		this.reportsTo = reportsTo;
+		this.balance = 1000.00;
 	}
 	
-	//with id, when building from db
+	/*when building from database*/
 	public Employee(int id,int roleId, String first, String last, String username, 
-			String password, String email, int reportsTo) {
+			String password, String email, int reportsTo, double balance) {
 		
+		this.id = id;
 		this.roleId = roleId;
 		this.firstName = first;
 		this.lastName = last;
@@ -39,6 +42,7 @@ public class Employee {
 		this.password = password;
 		this.email = email;
 		this.reportsTo = reportsTo;
+		this.balance = balance;
 	}
 
 	public int getId() {
@@ -104,12 +108,18 @@ public class Employee {
 	public void setReportsTo(int reportsTo) {
 		this.reportsTo = reportsTo;
 	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", roleId=" + roleId + ", firstName=" + firstName + ", lastName=" + lastName
+		return "Employee [ roleId=" + roleId + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", username=" + username + ", password=" + password + ", email=" + email + ", reportsTo=" + reportsTo
-				+ "]";
+				+ "balance" + balance +"]";
 	}
 	
 }

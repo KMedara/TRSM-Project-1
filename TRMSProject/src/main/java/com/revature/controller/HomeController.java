@@ -24,7 +24,7 @@ public class HomeController {
 }
 
 	public static String EmployeeJSON(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("in PetJSON method");
+		System.out.println("in EmployeeJSON method");
 		Employee emp =(Employee)request.getSession().getAttribute("Employee");
 		try {
 			response.getWriter().write(new ObjectMapper().writeValueAsString(emp));

@@ -3,28 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>User Information Page</title>
-<link rel="stylesheet" href="/style/Home.css">
 </head>
 	<body>
 		<h1>New User Registration Form</h1>
-			<form>
+			<form id="registerForm" method="POST" action="Register.do">
 				<p>First Name</p>
-				<p><input type="text" name="Firstname" value="" placeholder="First Name"></p>
+				<p><input type="text" name="firstname" value="" placeholder="First Name"></p>
 				<p>Last Name</p>
-				<p><input type="text" name="Lastname" value="" placeholder="Last Name"></p>
+				<p><input type="text" name="lastname" value="" placeholder="Last Name"></p>
 				<p>Enter Username </p>
-				<p><input type="text" name="Username" value="" placeholder="Username"></p>
+				<p><input type="text" name="username" value="" placeholder="Username"></p>
 				<p>Enter a valid password</p>
 				<p><input type="password" name="password" value="" placeholder="Choose your password"></p>
 				<p>Re-enter your password</p>
 				<p><input type="password" name="cpassword" value="" placeholder="Confirm password"></p>
 				<p>Please enter your email</p>
-				<p><input type="Email" name="Email" value="" placeholder="Email"></p>
-				<input type="radio" name="BenCo" value="1"> BenCo<br>
-				<input type="radio" name="Department Head" value="2"> Department Head <br>
-				<input type="radio" name="Department Supervisor" value="3"> Department Supervisor <br>
-				<input type="radio" name="Employee" value="4"> Employee<br>
-				<input type ="submit" name = "submit" value = "Create Account">
+				<p><input type="Email" name="email" value="" placeholder="Email"></p>
+				<input type="radio" name="role" value="1"> BenCo<br>
+				<input type="radio" name="role" value="2"> Department Head <br>
+				<input type="radio" name="role" value="3"> Department Supervisor <br>
+				<input type="radio" name="role" value="4"> Employee<br>
+				<input type="submit" name = "submit" value = "Create Account">
 				
 			</form>
 	</body>
